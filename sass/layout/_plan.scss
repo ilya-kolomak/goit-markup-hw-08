@@ -1,0 +1,45 @@
+.plan__item{
+    
+    @include tablet {
+      width: calc((100% - 60px) / 2);
+    }
+    @include desktop {
+      width: calc((100% - 120px) / 4);
+    }
+  }
+  .plan__list{
+    display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  }
+  
+ 
+  .plan__title{
+text-align: center;
+    @include font(14px, 700, 1.71, 0.03em);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  }
+  
+  .plan__text{
+    @include font(14px, null, 1.71, 0.03em);
+  // width: 270px;
+  color: var(--text-color);
+  }
+  
+  
+  .plan__icon-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+    width: 100%;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+   
+    }
+  

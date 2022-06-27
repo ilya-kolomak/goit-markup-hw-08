@@ -1,0 +1,42 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+ 
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--general-color);
+  background-color: var(--litter-color-white);
+}
+
+.list{
+  list-style: none;
+}
+
+  .top-title{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: center;
+    @include desktop{
+      @include font(36px, null, 1.16, 0.03em);
+    }
+    }
+
+    .section{
+      padding-top: 60px;
+      padding-bottom: 60px;
+    @include desktop{
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+    }
+
+.link:hover, 
+.link:focus{
+  color:var(--aсcent-color) ;
+}
