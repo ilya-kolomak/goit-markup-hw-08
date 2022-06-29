@@ -1,11 +1,23 @@
+
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+  border:none;
+  background-color:#ffffff;
+  @include tablet{
+    display: none;
+  }
+}
 .logo{
   
-  @include font(26px, 700, 1.19, null);
+  @include font(24px, 700, 1.17, null);
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
    
    color: var(--general-color);
-   
+   @include desktop{
+    @include font(26px, null, 1.19, null);
+   }
    
    }
    
@@ -13,20 +25,35 @@
      color: var(--general-color);
      text-decoration: none;}
    .header__logo{
-     margin-right: 93px;
-     padding-top: 24px;
-     padding-bottom: 25px;
+padding: 16px 0;
+@include tablet{
+  margin-right: 88px;
+  padding: 26px 0;
+
+}
+@include desktop{
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+     
    }
    
    .header{
      height: var(--heder-height);
      border-bottom: 1px solid #ECECEC;
+     width:100vw;
+  max-height: 60px;
+  @include tablet{
+    max-height:80px ;
+  }
       .container{
       display: flex;
       align-items: center;
     }
    }
    
+
    
    .currentlink{
      color: var(--aсcent-color);
@@ -36,10 +63,14 @@
      color:var(--aсcent-color) ;
    }
    
-   
-   
+   .nav{
+     display: none;
+     @include tablet{
+       display: flex;
+     }
+   }
    .nav__list{
-    @include font(null, 500, 1.14, 0.02em);
+    @include font(14px, 500, 1.14, 0.02em);
      display: flex;
      align-items: center;
    color: var(--general-color);
@@ -48,10 +79,18 @@
    
    
    .list-link{
-     display: flex;
-     margin-left: auto;
-     align-items: center;
-     
+     display: none;
+     @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 84px;
+      align-items: center;
+      @include desktop{
+        flex-wrap: nowrap;
+margin-left: auto;
+      }
+
+     }
    }
    .nav__top-link{
      transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,7 +103,10 @@
 
    .list-link__icon{
      fill:var(--text-color) ;
-     margin-right: 10px;
+     margin-right: 8px;
+     @include desktop{
+      margin-right: 10px;
+     }
      .list-link__contact:hover &,
      .list-link__contact:focus &{
        fill: var(--aсcent-color);
@@ -72,8 +114,14 @@
    }
    
    .list-link__contact{
+font-size: 12px;
+line-height: calc(14/12);
      font-weight: 500;
-     font-weight: normal;
+     @include desktop{
+       font-size: 14px;
+       line-height: calc(16/14);
+     }
+    
      text-decoration: none;
      color: var(--text-color);
      display: flex;
@@ -86,7 +134,12 @@
    
     }
     .list-link__item:not(:last-child){
-      margin-right:50px ;
+      margin-bottom: 10px;
+      @include desktop{
+        margin-bottom: 0;
+        margin-right:50px ;
+      }
+      
     }
 
    .nav__item{

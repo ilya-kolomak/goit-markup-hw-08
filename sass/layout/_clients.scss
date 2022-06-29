@@ -18,6 +18,9 @@
       height: 92px;
       border: 1px solid #AFB1B8;
     border-radius: 4px;
+      width: calc((100% - 60px) / 2);
+    
+
     @include tablet{
       width: calc((100% - 90px) / 3);
       
