@@ -128,14 +128,20 @@ body {
 .modal {
   padding: 40px;
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background-color: var(--litter-color-white);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-title {
@@ -182,7 +188,7 @@ body {
 }
 
 .modal-field {
-  margin-bottom: 10px;
+  margin-bottom: 28px;
 }
 
 .modal-input {
@@ -237,14 +243,20 @@ body {
 
 .check-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.1666666667;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .check-text::before {
@@ -748,7 +760,6 @@ span {
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  width: calc((100% - 60px) / 2);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
@@ -774,28 +785,43 @@ span {
 }
 
 .footer {
-  padding-top: 60px;
   padding-bottom: 60px;
   background: var(--background-сolor);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1198px) {
+  .tablet-footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 .footer-logo {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.1923076923;
+  margin-bottom: 20px;
   color: var(--litter-color-white);
-  padding-top: 60px;
 }
 
 .footer-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .footer-link:hover, .footer-link:focus {
   color: var(--aсcent-color);
 }
 
 .footer-list {
-  margin-top: 20px;
+  display: block;
+  text-align: center;
+}
+
+.footer-soc-secondary-list {
+  margin-top: 60px;
 }
 
 .footer-address {
@@ -805,9 +831,11 @@ span {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-top-list {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .footer-top-list {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .address {
@@ -819,7 +847,12 @@ span {
 }
 
 .footer-address-list {
-  margin-right: 70px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-address-list {
+    margin-right: 70px;
+  }
 }
 
 .footer-address {
@@ -832,8 +865,14 @@ span {
   display: flex;
   margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  .footer-soc-list {
+    justify-content: center;
+  }
+}
 
 .soc-title {
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.71;
@@ -868,6 +907,7 @@ span {
 }
 
 .form-title {
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.71;
@@ -877,15 +917,26 @@ span {
 }
 
 .footer-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: var(--background-сolor);
   color: rgba(255, 255, 255, 0.6);
   padding-left: 16px;
+  margin-bottom: 20px;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .footer-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    width: 358px;
+  }
 }
 
 .mail-btn {
@@ -901,19 +952,36 @@ span {
   background: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-left: 12px;
+  margin: 0 auto;
   cursor: pointer;
   color: #FFFFFF;
   border: none;
 }
 
-.footer-form {
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .footer-form {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
 
 .form-wrap {
-  display: flex;
   margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .form-wrap {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-wrap {
+    display: flex;
+  }
 }
 
 .footer-send-icon {
