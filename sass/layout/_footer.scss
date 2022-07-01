@@ -39,6 +39,7 @@
     
   }
   .footer-soc-secondary-list{
+    
     margin-top: 60px;
   }
 
@@ -77,12 +78,11 @@ margin-right: 70px;
     font-style:normal;
   }
   .footer-soc-list{
+    margin-bottom:60px;
     display: flex;
-   
+    justify-content: center;
     margin-top: 20px;
-    @include tablet{
-      justify-content: center;
-    }
+   
   }
   
   .soc-title{
