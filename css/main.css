@@ -718,6 +718,21 @@ span {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+@media screen and (min-width: 480px) {
+  .prise {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .prise {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prise {
+    display: block;
+  }
+}
 
 .our-team {
   background: #F5F4FA;
