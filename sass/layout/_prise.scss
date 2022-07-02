@@ -1,4 +1,8 @@
 .prise{
+  display:none;
+  @include desktop{
+      display: block;
+  }
     padding-top: 0;
     &__title{
       margin-bottom: 50px;
@@ -34,15 +38,8 @@
     color: #FFFFFF;
     
     }
-    @include mobile{
-      display:none;
+   
     }
-    @include tablet{
-      display:none;
-    }
-    @include desktop{
-      display:block;
-    }
-  }
+  
   
   
