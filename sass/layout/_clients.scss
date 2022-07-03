@@ -5,23 +5,26 @@
     // margin-top: 50px;
     margin-top: 30px;
     display: flex;
+    justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
     }
     
     .clients-item{
-      display: flex;
+      display: flex; 
       justify-content: center;
       align-items: center;
-      width: calc((100% - 60px) / 2);
-      width: 210px;
-      height: 92px;
+      width: 130px;
+      height: 80px;
       border: 1px solid #AFB1B8;
     border-radius: 4px;
+    width: calc((100% - 60px) / 2);
      
     
 
     @include tablet{
+      width: 210px;
+      height: 92px;
       width: calc((100% - 90px) / 3);
       
     }
