@@ -1,7 +1,11 @@
+
+
+
 .portfolio-top-list{
+
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 8px;
     justify-content: flex-start;
     margin-bottom:30px;
     @include tablet{
@@ -12,6 +16,15 @@
 
     }
   }
+  .footer-tablet{
+    display: block;
+    @include tablet{
+      display: flex;
+      justify-content: space-around;
+    }
+   
+  }
+ 
 
   .portfolio-link{
     display: block;

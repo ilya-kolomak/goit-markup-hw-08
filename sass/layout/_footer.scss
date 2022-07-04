@@ -18,7 +18,9 @@
   line-height:calc(31/26) ;
   margin-bottom:20px ;
   color: var(--litter-color-white);
-  
+  @include desktop{
+    text-align: start;
+  }
   
   }
   
@@ -35,8 +37,10 @@
   
   .footer-list{
    display:block;
-   text-align: center
-    
+   text-align: center;
+    @include desktop{
+      text-align: start;
+    }
   }
   .footer-soc-secondary-list{
     
@@ -67,6 +71,8 @@
     
     padding-top: 60px;
    @include desktop{
+     display: flex;
+     flex-direction: column;
 margin-right: 70px;
    }
     
@@ -146,7 +152,7 @@ margin-right: 70px;
   }
   @include desktop{
     width:358px ;
-  }
+  } 
   }
   .mail-btn{
     @include font(16px, 700, 1.88, 0.06em);
@@ -162,6 +168,9 @@ margin-right: 70px;
   cursor:pointer;
   color: #FFFFFF;
   border: none;
+  @include desktop{
+    margin-left: 12px;
+  }
   }
   
   .footer-form{
